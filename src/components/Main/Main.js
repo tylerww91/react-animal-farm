@@ -7,7 +7,14 @@ export default function Main(props) {
   return (
     <main>
       {animals.map((animal) => (
-        <Animal key={animal.name} name={animal.name} type={animal.type} />
+        <Animal
+          key={animal.name}
+          name={animal.name}
+          type={animal.type}
+          says={animal.says}
+          top={animal.top}
+          left={animal.left}
+        />
       ))}
     </main>
   );

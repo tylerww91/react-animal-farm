@@ -1,4 +1,11 @@
-import animals from '../../data.js';
-export default function Animal() {
-  return <></>;
+import './Animal.css';
+
+export default function Animal(props) {
+  return (
+    <div className="animal" style={{ top: props.top, left: props.left }}>
+      <img src={`/animals/${props.type}.svg`} />
+      <h2 className="name">{props.name}</h2>
+      <p>{props.says}</p>
+    </div>
+  );
 }
